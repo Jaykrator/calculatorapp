@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 30px;
+}
+
+#calculator {
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  background-color: rgb(19, 12, 2);
+  border-radius: 25px;
+  max-width: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-height: 650px;
+}
+
+#display {
+  width: 100%;
+  padding: 20px;
+  font-size: 3rem;
+  border: none;
+  text-align: left;
+  background-color: rgb(37, 35, 32);
+  color: aliceblue;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+button {
+  width: 100px;
+  height: 80px;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(13, 218, 218);
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(19, 12, 2);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(96, 117, 117);
+}
+
+button:active {
+  background-color: rgb(184, 221, 221);
+}
+
+.operator-btn {
+  background-color: rgb(184, 221, 221);
+}
+
+/* For small devices (mobile phones) */
+@media (max-width: 400px) {
+  #display {
+    font-size: 2rem; /* Smaller font size for mobile devices */
+    padding: 10px; /* Less padding on the display */
+  }
+
+  button {
+    height: calc(50px); /* Smaller button height for mobile devices */
+    font-size: 2rem; /* Smaller font size for buttons on mobile devices */
+  }
+}
+
+/* For medium devices (tablets) */
+@media (min-width: 401px) and (max-width: 768px) {
+  #display {
+    font-size: 2.5rem; /* Medium font size for tablets */
+    padding: 15px; /* Slightly more padding on the display */
+  }
+
+  button {
+    height: calc(60px); /* Medium button height for tablets */
+    font-size: 2.5rem; /* Medium font size for buttons on tablets */
+  }
+}
+
+/* For large devices (desktops) */
+@media (min-width: 769px) {
+  #display {
+    font-size: 3rem; /* Larger font size for desktops */
+    padding: 20px; /* Standard padding on the display */
+  }
+
+  button {
+    height: calc(80px); /* Standard button height for desktops */
+    font-size: 3rem; /* Standard font size for buttons on desktops */
+  }
+}
